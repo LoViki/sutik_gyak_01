@@ -142,10 +142,31 @@ p{
     font-weight: 400;
 }
 
+h1, h2, p{
+    margin: 20px;
+}
+
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: (1fr, auto);
-    max-width: 70%;
+    max-width: 90%;
+}
+
+header, section, footer{
+    max-width: 100vw;
+    margin: auto;
+}
+
+footer{
+    border: solid 3px #8d5b1a;
+    border-radius: 12px;
+    padding: 0.5rem;
+    background-color: #8d5b1a;
+    color: #feda70;
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 32px;
 }
 
