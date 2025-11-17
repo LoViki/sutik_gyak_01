@@ -1,0 +1,151 @@
+/* 2. feladat
+CSS alapok
+
+Készítsd el a következő formázásokat az index.css-ben.
+Minden elemre legyen igaz a következő:
+külső margó = 0
+belső margó = 0
+box-sizing: border-box
+
+<body>:
+A body tag háttere legyen a forras/background.png
+A háttérkép ne ismétlődjön és a példának megfelelően terüljön el a képernyőn
+Minimum magassága 100vh
+Minimum szélessége 100vw
+Belső margója legyen x tengelyen: 32px
+Belső margója legyen y tengelyen: 64px
+
+<main>:
+Maximum szélessége: 90vw
+Minimum magassága: calc(100vh - 128px);
+Legyen középre rendezett
+Háttérszíne fehér (#ffffff)
+Legyen lekerekítve a szélei 12px-re
+Állíts be neki a keretet 3px folytonosra és legyen fekete a színe!
+
+Importáld be az index.css-be a Schoolbell-Regular.ttf betűtípust és minden elemnek
+állítsd be az oldalon ezt a betűcsaládot */
+
+@font-face {
+  font-family: Schoolbell;
+  src: url(forras/Schoolbell-Regular.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: schoolbell;
+}
+
+body{
+    background-image: url(forras/background.png);
+    background-size: cover;
+    border-image-repeat: stretch;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding-inline-start: 32px;
+    padding-inline-end: 32px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+main{
+    max-width: 90vw;
+    min-height: 80vh;
+    /* min-height: calc(100vh-128px); */
+    background-color: #ffffff;
+    margin: auto;
+    border: solid 3px #8d5b1a;
+    border-radius: 12px;
+}
+/* 
+    3. feladat
+    CSS grid
+    <section>
+    belső margó 32px
+
+    Készítsd el a navigációt a mintának megfelelően
+    gombok betűszíne: #8d5b1a;
+    gombok háttere: #feda70;
+    betűmérete: 20px
+    belsőmargója: 0.5rem
+    kerekítés 12px
+
+    Alakítsd ki az oldal szövegezését a mintának megfelelően, Használd a szoveg.txt-t a forrásból!
+    Használj gridet az oldal tartalmának rendezéséhez!
+
+    Segítség:
+    <h1>
+    betűméret: 28px
+    betű vastagság: 400
+    <h2>
+    betűméret: 56px
+    betű vastagság: 400
+    <p>
+    betűméret: 24px
+    max szélesség: 60ch
+    betű vastagság: 400 */
+
+header{
+    height: 6px;
+}
+
+.navigacio{
+    width: 300px;
+    margin: auto;
+}
+
+nav{
+    margin: 40px;
+}
+
+.gomb{
+    border: solid 3px #8d5b1a;
+    border-radius: 10px;
+    color: #8d5b1a;
+    background-color:  #feda70;
+    font-size: 20px;
+    padding: 0.5rem;
+}
+
+article {
+    height: fit-content;
+    max-width: 1080px;
+    margin: auto;
+    display: grid;
+}
+
+img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+
+h1{
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h2{
+    font-size: 56px;
+    font-weight: 400;
+}
+
+p{
+    /* betűméret: 24px
+    max szélesség: 60ch
+    betű vastagság: 400 */
+    font-size: 24px;
+    max-width: 60ch;
+    font-weight: 400;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: (1fr, auto);
+    max-width: 70%;
+}
+
